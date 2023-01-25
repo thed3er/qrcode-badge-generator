@@ -1,0 +1,24 @@
+<article class="container vh-100 d-flex justify-content-center align-items-center">
+  <section class="row">
+    <form #form="ngForm" (ngSubmit)="createQRCode(form)">
+    <div class="row m-3">
+      <label for="name">Full name:</label><input ngModel type="text" class="form-control form-control-lg" placeholder="John Wick" id="name" name="name" required>
+    </div>
+    <div class="row m-3">
+      <label for="name">Email:</label><input ngModel type="email" class="form-control form-control-lg" placeholder="wick.john@gmail.com" id="email" name="email" required>
+    </div>
+    <div class="row m-3">
+      <label for="name">Github name:</label><input ngModel type="text" class="form-control form-control-lg" placeholder="Wick_J" id="github" name="github">
+    </div>
+    <div class="row m-3">
+      <input type="reset" value="Reset" class="btn btn-light" (click)="reset(form)">
+      <input type="submit" value="Create" class="btn btn-primary mt-4">
+    </div>
+    </form>
+    <div class="row text-center">
+      <div #qrImg id="placeHolder"></div>
+    </div>
+  </section>
+</article>
+
+
